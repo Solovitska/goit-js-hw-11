@@ -4,7 +4,7 @@
   --font-family: 'Montserrat', sans-serif;
 }
 
-.group-section {
+.search-section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,7 +47,7 @@ button {
   padding: 8px 16px;
   width: 91px;
   height: 40px;
-  background: #4e75ff;
+  background: #4edcff;
 
   font-family: var(--font-family);
   font-weight: 500;
@@ -57,7 +57,7 @@ button {
   color: #fff;
 }
 button:hover {
-  background: #6c8cff;
+  background: #6cffa2;
 }
 .loader {
   width: 48px;
@@ -126,5 +126,5 @@ button:hover {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  color: #2e2f42;
+  color: #2e423c;
 }
