@@ -6,26 +6,23 @@ const classes = isVisible.classList;
 
 export function getImages(name) {
   classes.toggle('isVisible', false);
-  const URL =
-    'https://pixabay.com/api/?key=' +
-    API_KEY +
-    '&q=' +
-    encodeURIComponent(name) +
-    '&image_type=photo' +
-    '&orientation=horizontal' +
-    '&safesearch=true';
+  const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent(name)}&image_type=photo&orientation=horizontal&safesearch=true`;
 
   fetch(URL)
     .then(response => {
       if (!response.ok) {
-        throw new Error(response.status);
+        throw new Error(`Request failed with status: ${response.status}`);
       }
       classes.toggle('isVisible', true);
       return response.json();
     })
     .then(result => {
-      // Дані від бекенда
-      showResult(result);
+      if (result && result.hits) {
+       // Data from the backend
+        showResult(result);
+      } else {
+        throw new Error('Invalid data format');
+      }
     })
     .catch(error => console.log(error));
 }
