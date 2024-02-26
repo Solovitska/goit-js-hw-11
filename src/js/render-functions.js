@@ -1,7 +1,6 @@
 import iziToast from 'izitoast';
 import errorIcon from '../img/error.svg';
 import 'izitoast/dist/css/iziToast.min.css';
-
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 const gallery = document.querySelector('.gallery');
