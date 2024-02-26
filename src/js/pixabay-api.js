@@ -1,5 +1,5 @@
 import { showResult } from './render-functions';
-const API_KEY = '42515618-500ad6d8e1f921b5ea984b145';
+const API_KEY = '42574580-2c52a100a2b29f75d1ac631cf';
 
 const isVisible = document.querySelector('.isVisible');
 const classes = isVisible.classList;
